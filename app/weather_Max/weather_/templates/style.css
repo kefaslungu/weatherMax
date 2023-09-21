@@ -1,0 +1,4 @@
+<!-- Inside your HTML templates, e.g., weather.html -->
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>

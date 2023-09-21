@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WeatherMax by Tech marshal Kefas Lungu</title>
+</head>
+<body>
+    <h1>Weather Check</h1>
+    <form method="post" action="{% url 'get_weather' %}">
+        {% csrf_token %}
+        <label for="location">Enter location:</label>
+        <input type="text" id="location" name="location" required>
+        <button type="submit">Check Weather</button>
+    </form>
+</body>
+</html>
