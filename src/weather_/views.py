@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 import requests
@@ -6,6 +7,8 @@ from datetime import datetime
 
 def index(request):
     return render(request, 'index.html')
+
+@csrf_exempt
 def get_weather(request):
     if request.method == 'POST':
         location = request.POST['location']

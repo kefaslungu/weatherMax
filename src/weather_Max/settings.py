@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-gg-ui70x_#k$9ec5go@fx!44!z6a=gio2t!1b^oc--cb@iw-x(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['weathermax.azurewebsites.net', 'www.weathermax.azurewebsites.net']
 
 
 # Application definition
@@ -88,7 +88,6 @@ TEMPLATES = [
 """
 
 WSGI_APPLICATION = 'weather_Max.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
