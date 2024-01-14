@@ -14,27 +14,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-#from weather_. import views
-from django.contrib import admin
 import importlib
+from django.contrib import admin
+from django.urls import path
 
 # Dynamically import the views module from the app
-
 views = importlib.import_module('.views', package='weather_')
-from django.urls import path, include
+view = importlib.import_module('.views', package='weatherforecast')
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('get_weather/', views.get_weather, name='get_weather'),
+    path('weatherforecast/', view.get_weatherforecast, name='forecast'),
 ]
-"""
-from .weather_ import views
-
-from django.urls import path, include
-
-urlpatterns = [
-    path('', views.index, name='index'),  # Maps to the "index" view
-    path('get_weather/', views.get_weather, name='get_weather'),  # Maps to the "get_weather" view
-    # Add more URL patterns as needed
-]
-"""

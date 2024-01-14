@@ -1,0 +1,19 @@
+{% include 'weather_/templates/header.html' %}
+  <h1>Weather Forecast</h1>
+  <ul>
+    {% for day in forecast_list %}
+      <li>
+        <strong>Date:</strong> {{ day.date }} |
+        <strong>Max Temperature:</strong> {{ day.temperature_max }} |
+        <strong>Min Temperature:</strong> {{ day.temperature_min }} |
+        <strong>Precipitation:</strong> {{ day.precipitation }} |
+        <strong>Wind Speed:</strong> {{ day.wind_speed }} |
+        <strong>Wind Direction:</strong> {{ day.wind_direction }} |
+        <strong>Humidity:</strong> {{ day.humidity }} |
+        <strong>Pressure:</strong> {{ day.pressure }} |
+        <strong>Visibility:</strong> {{ day.visibility }} |
+        <strong>Cloud Cover:</strong> {{ day.cloud_cover }}
+      </li>
+    {% endfor %}
+  </ul>
+{% include 'weather_/templates/footer.html' %}

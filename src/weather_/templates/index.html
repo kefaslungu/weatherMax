@@ -1,11 +1,13 @@
-{% include 'header.html' %}<!DOCTYPE html>
-<html>
+{% include 'header.html' %}
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title>WeatherMax by Tech marshal Kefas Lungu</title>
 </head>
-<h2>About weatherMax</h2>
-<p>WeatherMax is a small web application to check the weather using weatherstack API. It is a requirement to complete the <a href="https://www.alxafrica.com/" target="_blank">ALX</a> 9-12 month software engineering program</p>
 <body>
+    <h2>About weatherMax</h2>
+    <p>WeatherMax is a small web application to check the weather using the Visual Crossing Weather API. It is a requirement to complete the <a href="https://www.alxafrica.com/" target="_blank">ALX</a> 9-12 month software engineering program</p>
+
     <h1>It's time to check the weather!</h1>
     <p>Type the location you want to check weather result for, and click on the check weather button</p>
     <form method="post" action="{% url 'get_weather' %}">
@@ -17,5 +19,4 @@
     </form>
 </body>
 </html>
-
 {% include 'footer.html' %}

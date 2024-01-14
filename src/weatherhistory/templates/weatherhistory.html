@@ -1,0 +1,20 @@
+<!-- weather_/templates/weatherhistory.html -->
+
+{% block content %}
+    <h2>Weather History</h2>
+
+    <form method="post" action="{% url 'weatherhistory' %}">
+        {% csrf_token %}
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required>
+        <br>
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="end_date" required>
+        <br>
+        <!-- Add more input fields for additional parameters as needed -->
+        <button type="submit">Get Weather History</button>
+    </form>
+
+    <!-- Display historical weather information as needed -->
+    <!-- Access the historical weather data using the 'history_data' context variable -->
+{% endblock %}
